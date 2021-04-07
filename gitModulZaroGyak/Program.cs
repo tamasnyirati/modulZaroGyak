@@ -20,7 +20,8 @@ namespace gitModulZaroGyak
                 szemelyek.Add(szemely);
             }
             //adatok száma
-            
+            int N = szemelyek.Count;
+            Console.WriteLine($"A személyek száma: {N}");
             //legnagyobb elem helye
 
             // van budapesti lakos
@@ -32,6 +33,8 @@ namespace gitModulZaroGyak
             //milyen keruletekben laknak
 
             //melyi keruletben hanyan laknak
+
+            Console.ReadLine();
         }
     }
 }
