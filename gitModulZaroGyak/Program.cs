@@ -34,11 +34,15 @@ namespace gitModulZaroGyak
 
 
             // van budapesti lakos
+            Console.WriteLine("Van budapesti lakos?");
             i = 0;
             while (i<N && !(szemelyek[i].getHely() == "Budapest")) { i++; }
             bool van = i < N;
-            Console.WriteLine(van ? "van" : "nincs");
+            Console.Write(van ? "van" : "nincs");
+            
             //mindenki 18 feletti
+            Console.WriteLine();
+            Console.WriteLine("Mindenki elmúlt 18 éves?");
             int mindenkiNagykoru = 0;
             bool nagykoruak = false;
             for (i = 0; i < N; i++)
@@ -55,8 +59,16 @@ namespace gitModulZaroGyak
                 
             }
             Console.WriteLine(nagykoruak? "Mindenki Nagykorú" : "Nem Mindenki nagykorú");
+            
             //ki lakik a XIII. keruletben
-
+            Console.WriteLine("Ki lakik a XIII.keruletben? ");
+            for (i = 0; i < N; i++)
+            {
+                if (szemelyek[i].getKer() == 13)
+                {
+                    Console.Write($"\t{szemelyek[i].getNev()}");
+                }
+            }
             //milyen keruletekben laknak
 
             //melyi keruletben hanyan laknak
