@@ -39,7 +39,22 @@ namespace gitModulZaroGyak
             bool van = i < N;
             Console.WriteLine(van ? "van" : "nincs");
             //mindenki 18 feletti
-
+            int mindenkiNagykoru = 0;
+            bool nagykoruak = false;
+            for (i = 0; i < N; i++)
+            {
+                if (szemelyek[i].getKor() > 18)
+                {
+                    mindenkiNagykoru++;
+                }
+                if (mindenkiNagykoru == 5)
+                {
+                    nagykoruak = true;
+                    
+                }
+                
+            }
+            Console.WriteLine(nagykoruak? "Mindenki Nagykorú" : "Nem Mindenki nagykorú");
             //ki lakik a XIII. keruletben
 
             //milyen keruletekben laknak
