@@ -23,7 +23,14 @@ namespace gitModulZaroGyak
             int N = szemelyek.Count;
             Console.WriteLine($"A személyek száma: {N}");
             //legnagyobb elem helye
+            int korMax = 0;
+            for (int i = 0; i < N; i++)
+            {
+                if(szemelyek[i].getKor() > korMax) { korMax = i; }
+            }
+            Console.WriteLine($"A legidősebb személy: { szemelyek[korMax].getNev()}");
 
+            
             // van budapesti lakos
 
             //mindenki 18 feletti
