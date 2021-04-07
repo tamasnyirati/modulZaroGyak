@@ -70,7 +70,17 @@ namespace gitModulZaroGyak
                 }
             }
             //milyen keruletekben laknak
-
+            Console.WriteLine();
+            Console.WriteLine("Melyik kerületekben laknak?");
+            HashSet<int> keruletek = new HashSet<int>();
+            foreach (Szemely szemely in szemelyek)
+            {
+                keruletek.Add(szemely.getKer());
+            }
+            foreach (int kerulet in keruletek)
+            {
+                Console.WriteLine($"\t{kerulet}");
+            }
             //melyi keruletben hanyan laknak
 
             Console.ReadLine();
