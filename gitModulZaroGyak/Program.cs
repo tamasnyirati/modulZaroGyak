@@ -81,9 +81,32 @@ namespace gitModulZaroGyak
             {
                 Console.WriteLine($"\t{kerulet}");
             }
-            //melyi keruletben hanyan laknak
+            //melyik keruletben hanyan laknak
+            Dictionary<int, int> kerDb = new Dictionary<int, int>();
+            foreach (Szemely szemely in szemelyek)
+            {
+                int kulcs = szemely.getKer();
+                if (kerDb.ContainsKey(kulcs))
+                {
+                    kerDb[kulcs]++;
+                }
+                else
+                {
+                    kerDb.Add(kulcs, 1);
+                }
+
+            }
+                foreach (KeyValuePair<int,int> item in kerDb)
+                {
+                    Console.WriteLine($"{item.Key} kerületből {item.Value} lakó");
+                }
+
+
+
+
 
             Console.ReadLine();
+            }
         }
     }
-}
+
